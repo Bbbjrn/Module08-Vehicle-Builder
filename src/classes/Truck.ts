@@ -40,7 +40,7 @@ class Truck extends Vehicle implements AbleToTow {
     this.color = color;
     this.make = make;
     this.model = model;
-    this.year = year;
+    this.year = year; 
     this.weight = weight;
     this.topSpeed = topSpeed;
     if (wheels.length !== 4) {

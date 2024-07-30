@@ -323,10 +323,10 @@ class Cli {
             'Turn right',
             'Turn left',
             'Reverse',
-            'Select or create another vehicle',
-            'Exit',
             'Tow a vehicle',
             'Do a wheelie',
+            'Select or create another vehicle',
+            'Exit',
           ],
         },
       ])
@@ -395,6 +395,8 @@ class Cli {
             if (this.vehicles[i].vin === this.selectedVehicleVin && this.vehicles[i] instanceof Truck) {
               this.findVehicleToTow(this.vehicles[i] as Truck);
               return;
+            } else {
+              console.log('Only Tucks can Tow!!');
             }
           }
         }
@@ -403,9 +405,11 @@ class Cli {
           for (let i = 0; i < this.vehicles.length; i++) {
             if (this.vehicles[i].vin === this.selectedVehicleVin && this.vehicles[i] instanceof Motorbike) {
               (this.vehicles[i] as Motorbike).wheelie();
-            }
+            } else {
+              console.log('Only Motorbikes can do a wheelie!!');
           }
         }
+      } 
         else if (answers.action === 'Select or create another vehicle') {
           // start the cli to return to the initial prompt if the user wants to select or create another vehicle
           this.startCli();

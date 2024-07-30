@@ -1,4 +1,5 @@
 // import classes
+import inquirer from "inquirer";
 import Truck from "./classes/Truck.js";
 import Car from "./classes/Car.js";
 import Motorbike from "./classes/Motorbike.js";
